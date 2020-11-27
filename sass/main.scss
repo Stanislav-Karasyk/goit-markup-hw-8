@@ -1,0 +1,21 @@
+@import "./utils/variables";
+
+//BASE
+@import "./base/common";
+@import "./base/container";
+
+//UTILS
+@import "./utils/visually-hidden";
+
+//LOYOUT
+@import "./loyout/header";
+@import "./loyout/hero";
+@import "./loyout/advantages";
+@import "./loyout/activities";
+@import "./loyout/team";
+@import "./loyout/client";
+@import "./loyout/footer";
+
+//BACKDROP
+@import "./components/backdrop";
+@import "./components/modal-form";
