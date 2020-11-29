@@ -13,9 +13,8 @@
 
     <body>
         <!-- HEADER -->
-        <header class="header">
+        <!-- <header class="header">
             <div class="container">
-                <!-- главная навигация -->
                 <nav class="site-nav">
                     <a href="./index.html" class="logo">
                         <span class="logo-web">Web</span><span class="logo-studio">Studio</span>
@@ -26,7 +25,6 @@
                         <li class="site-nav-list-item"><a href="" class="site-nav-link">Контакты</a></li>
                     </ul>
                 </nav>
-                <!-- ссылки на почти и телефон -->
                 <ul class="contacts list">
                     <li class="contact-item-mail">
                         <a href="mailto:info@devstudio.com" class="contacts-link">
@@ -44,7 +42,7 @@
                     </li>
                 </ul>
             </div>
-        </header>
+        </header> -->
         <main>
 
             <!-- PORTFOLIO -->
@@ -67,7 +65,15 @@
                                 <div class="portfolio-overlay">
                                     <p class="portfolio-overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового
                                     шпионажа и атак на защищённые сервера конкурентов.</p>
-                                    <img src="./images/portfolio/1.jpg" alt="ноутбук" width="370">
+                                    <picture>
+                                        <source srcset="./images/portfolio/desktop/1-desktop.jpg 1x, ./images/portfolio/desktop/1-desktop@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/portfolio/tablet/1-tablet.jpg 1x, ./images/portfolio/tablet/1-tablet@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/portfolio/mobile/1-mobile.jpg 1x, ./images/portfolio/mobile/1-mobile@2x.jpg 2x"
+                                            media="(min-width: 480px)">
+                                        <img src="./images/portfolio/mobile/1-mobile.jpg" alt="ноутбук">
+                                    </picture>
                                 </div>
                                 <div class="card-info">
                                     <h2 class="examples-name">Технокряк</h2>
@@ -75,50 +81,121 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/2.jpg" alt="постер New Orlean vs Golden Star"
-                                width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/2-desktop.jpg 1x, ./images/portfolio/desktop/2-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/2-tablet.jpg 1x, ./images/portfolio/tablet/2-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/2-mobile.jpg 1x, ./images/portfolio/mobile/2-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/2-mobile.jpg" alt="постер New Orlean vs Golden Star">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Постер New Orlean vs Golden Star</h2>
                                 <p class="examples-direction">Дизайн</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/3.jpg" alt="логотип ресторана Seafood" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/3-desktop.jpg 1x, ./images/portfolio/desktop/3-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/3-tablet.jpg 1x, ./images/portfolio/tablet/3-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/3-mobile.jpg 1x, ./images/portfolio/mobile/3-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/3-mobile.jpg" alt="логотип ресторана Seafood">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Ресторан Seafood</h2>
                                 <p class="examples-direction">Приложение</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/4.jpg" alt="наушники" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/4-desktop.jpg 1x, ./images/portfolio/desktop/4-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/4-tablet.jpg 1x, ./images/portfolio/tablet/4-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/4-mobile.jpg 1x, ./images/portfolio/mobile/4-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/4-mobile.jpg" alt="наушники">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Проект Prime</h2>
                                 <p class="examples-direction">Маркетинг</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/5.jpg" alt="две коробки" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/5-desktop.jpg 1x, ./images/portfolio/desktop/5-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/5-tablet.jpg 1x, ./images/portfolio/tablet/5-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/5-mobile.jpg 1x, ./images/portfolio/mobile/5-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/5-mobile.jpg" alt="две коробки">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Проект Boxes</h2>
                                 <p class="examples-direction">Приложение</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/6.jpg" alt="монитор" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/6-desktop.jpg 1x, ./images/portfolio/desktop/6-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/6-tablet.jpg 1x, ./images/portfolio/tablet/6-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/6-mobile.jpg 1x, ./images/portfolio/mobile/6-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/6-mobile.jpg" alt="монитор">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Inspiration has no Borders</h2>
                                 <p class="examples-direction">Веб-сайт</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/7.jpg" alt="книга" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/7-desktop.jpg 1x, ./images/portfolio/desktop/7-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/7-tablet.jpg 1x, ./images/portfolio/tablet/7-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/7-mobile.jpg 1x, ./images/portfolio/mobile/7-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/7-mobile.jpg" alt="книга">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Издание Limited Edition</h2>
                                 <p class="examples-direction">Дизайн</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/8.jpg" alt="логотип проекта LAB" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/8-desktop.jpg 1x, ./images/portfolio/desktop/8-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/8-tablet.jpg 1x, ./images/portfolio/tablet/8-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/8-mobile.jpg 1x, ./images/portfolio/mobile/8-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/8-mobile.jpg" alt="логотип проекта LAB">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Проект LAB</h2>
                                 <p class="examples-direction">Маркетинг</p>
                             </div>
                         </li>
-                        <li class="portfolio-list-item"><img src="./images/portfolio/9.jpg" alt="работа за ноутбуком" width="370">
+                        <li class="portfolio-list-item">
+                            <picture>
+                                <source srcset="./images/portfolio/desktop/9-desktop.jpg 1x, ./images/portfolio/desktop/9-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/portfolio/tablet/9-tablet.jpg 1x, ./images/portfolio/tablet/9-tablet@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/portfolio/mobile/9-mobile.jpg 1x, ./images/portfolio/mobile/9-mobile@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img src="./images/portfolio/mobile/9-mobile.jpg" alt="работа за ноутбуком">
+                            </picture>
                             <div class="card-info">
                                 <h2 class="examples-name">Growing Business</h2>
                                 <p class="examples-direction">Приложение</p>
@@ -131,8 +208,8 @@
 
         <!-- FOOTER -->
         <footer class="footer">
-            <div class="footer-container">
-                <div>
+            <div class="container footer-container">
+                <div class="footer-address">
                     <a href="./index.html" class="logo">
                         <span class="logo-web">Web</span><span class="logo-studio-footer">Studio</span>
                     </a>
@@ -177,8 +254,8 @@
                 </div>
                 <form class="footer-form">
                     <h3 class="footer-form-title">Подпишитесь на рассылку</h3>
-                    <input class="footer-form-input" type="email" name="user-email" placeholder="E-mail">
-                    <button type="button" class="footer-form-btn"><span class="footer-form-btn-name">Подписаться</span>
+                        <input class="footer-form-input" type="email" name="user-email" placeholder="E-mail">
+                    <button type="button" class="footer-form-btn"><span class="footer-form-btn-name">Подписаться</span> 
                         <svg class="footer-form-svg" width="24" height="24">
                             <use href="./images/sprite.svg#icon-icon-telegram"></use>
                         </svg>
@@ -186,5 +263,6 @@
                 </form>
             </div>
         </footer>
+
     </body>
 </html>

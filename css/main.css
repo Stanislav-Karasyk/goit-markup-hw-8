@@ -24,7 +24,6 @@ img {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
-  outline: 1px solid red;
 }
 
 @media screen and (min-width: 480px) {
@@ -57,7 +56,6 @@ img {
   overflow: hidden;
 }
 
-/* ==========HEADER========== */
 .header {
   border-bottom: 1px solid #ececec;
 }
@@ -217,7 +215,6 @@ img {
   margin-right: 50px;
 }
 
-/* ==========HEADER END========== */
 .hero {
   padding-top: 118px;
   padding-bottom: 118px;
@@ -459,8 +456,8 @@ img {
   color: #212121;
   font-family: Roboto;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2x;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 30px;
@@ -548,6 +545,10 @@ img {
     padding-top: 94px;
     padding-bottom: 94px;
   }
+  .team-title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
   .team-card-info {
     padding: 30px 32px;
   }
@@ -559,24 +560,24 @@ img {
   }
 }
 
-/* ==========CLIENT========== */
 .client {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .client-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .client-list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -584,7 +585,7 @@ img {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -607,21 +608,66 @@ img {
   fill: #2196f3;
 }
 
+.client-list-item:nth-child(-n + 4) {
+  margin-bottom: 30px;
+}
+
 .client-logo {
   fill: #afb1b8;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* ==========CLIENT END========== */
-/* ==========FOOTER========== */
+@media screen and (min-width: 768px) {
+  .client-list-link {
+    width: 226px;
+  }
+  .client-list-item:nth-child(-n + 4) {
+    margin-bottom: 0;
+  }
+  .client-list-item:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .client-title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+  .client-list-link {
+    width: 170px;
+  }
+  .client-list {
+    flex-wrap: nowrap;
+  }
+  .client-list-item:nth-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}
+
 .logo-studio-footer {
   color: #ffffff;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
 }
 
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer-address {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .address {
@@ -693,18 +739,12 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-container {
-  display: flex;
-  align-items: center;
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
 .footer-social {
   width: 206px;
   height: 80px;
-  margin-left: 70px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .footer-social-title,
@@ -728,7 +768,8 @@ img {
 }
 
 .footer-form {
-  margin-left: 83px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .footer-form-btn {
@@ -761,7 +802,7 @@ img {
 }
 
 .footer-form-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   background-color: #2f303a;
   color: #ffffff;
@@ -769,15 +810,60 @@ img {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  margin-bottom: 20px;
   padding-left: 16px;
-  margin-right: 10px;
 }
 
 .footer-form-input:focus {
   outline: none;
 }
 
-/* ==========FOOTER END========== */
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .footer-address {
+    margin-right: 165px;
+    margin-left: 61px;
+  }
+  .footer-form-btn {
+    margin-left: 85px;
+    margin-right: 85px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    flex-wrap: nowrap;
+  }
+  .footer-form-input {
+    width: 350px;
+    margin-right: 10px;
+  }
+  .footer-address {
+    margin-left: 0;
+    margin-right: 70px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .footer-social {
+    padding-top: 15px;
+    margin-right: 93px;
+    text-align: left;
+  }
+  .footer-form {
+    padding-top: 15px;
+    margin: 0;
+    text-align: left;
+  }
+  .footer-form-btn {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* ==========BACKDROP========== */
 .backdrop {
   position: fixed;
