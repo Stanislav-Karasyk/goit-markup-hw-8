@@ -215,6 +215,24 @@ img {
   margin-right: 50px;
 }
 
+.menu-button {
+  display: block;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icom-menu-close {
+  display: none;
+}
+
+.menu-button.is-open .icom-menu-close {
+  display: block;
+}
+
+.menu-button.is-open .icom-menu {
+  display: none;
+}
+
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;

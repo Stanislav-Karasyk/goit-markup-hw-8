@@ -1,9 +1,7 @@
-/* ==========MODAL FORM========== */
-
 .modal-title-text {
   font-weight: 900;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -80,8 +78,8 @@
 
 .modal-form-comment::placeholder {
   font-weight: 400;
-  font-size: 12px;
-  line-height: 1.16;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
 
   color: rgba(117, 117, 117, 0.5);
@@ -92,8 +90,8 @@
   align-items: center;
 
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: $primary-text-color;
@@ -151,4 +149,24 @@
   }
 }
 
-/* ==========MODAL FORM END========== */
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
+
+  .modal-title-text {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .contact-form-policy-label {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .modal-form-comment::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
