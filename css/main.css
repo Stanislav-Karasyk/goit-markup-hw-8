@@ -58,14 +58,36 @@ img {
 
 .header {
   border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
-.header .container {
+.menu-button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+.menu-button .icom-menu-close {
+  display: none;
+}
+
+.menu-button.is-open .icom-menu-close {
+  display: block;
+}
+
+.menu-button.is-open .icom-menu {
+  display: none;
+}
+
+.menu-button:hover {
+  fill: #2196f3;
+}
+
+.header-container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
-/* лого */
 .logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -73,7 +95,6 @@ img {
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-  margin-right: 93px;
 }
 
 .logo-web {
@@ -93,7 +114,7 @@ img {
 /* главная навигация */
 .site-nav {
   display: flex;
-  align-items: center;
+  text-align: center;
 }
 
 .site-nav-link {
@@ -104,9 +125,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   display: block;
-  min-height: 80px;
   position: relative;
-  padding-top: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -118,7 +137,7 @@ img {
   border-radius: 2px;
   background-color: #2196f3;
   position: absolute;
-  bottom: 0;
+  top: 25px;
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -137,11 +156,12 @@ img {
 
 .site-nav-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .site-nav-list-item:not(:last-child) {
-  margin-right: 50px;
+  margin-bottom: 40px;
 }
 
 .current {
@@ -150,8 +170,12 @@ img {
 
 /* ссылки на почти и телефон */
 .contacts {
-  display: flex;
-  margin-left: auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-item-phone {
+  margin-top: 16px;
 }
 
 .contacts-link {
@@ -211,26 +235,69 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-item-mail {
-  margin-right: 50px;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: block;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+  .header-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
-.menu-button {
-  display: block;
-  border: none;
-  background-color: transparent;
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+  .menu-container {
+    display: flex;
+  }
+  .site-nav-list {
+    flex-direction: row;
+  }
+  .contacts {
+    margin-top: 21px;
+    text-align: left;
+    margin-left: 84px;
+  }
+  .site-nav-list-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .site-nav-link {
+    padding-top: 32px;
+  }
+  .site-nav-link::after {
+    top: 84px;
+  }
+  .logo {
+    margin-top: 24px;
+  }
 }
 
-.menu-button .icom-menu-close {
-  display: none;
-}
-
-.menu-button.is-open .icom-menu-close {
-  display: block;
-}
-
-.menu-button.is-open .icom-menu {
-  display: none;
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 305px;
+  }
+  .contact-item-phone {
+    margin-left: 30px;
+    margin-top: 0;
+  }
 }
 
 .hero {
@@ -243,7 +310,7 @@ img {
 }
 
 .hero-title {
-  width: 360px;
+  width: 100%;
   margin: 0 auto;
   color: #ffffff;
   font-weight: 900;
@@ -290,6 +357,12 @@ img {
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-tablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    width: 360px;
   }
 }
 
@@ -672,7 +745,7 @@ img {
   color: #ffffff;
 }
 
-.logo {
+.logo-footer {
   display: block;
   margin: 0 auto;
 }
@@ -820,7 +893,7 @@ img {
 }
 
 .footer-form-input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   background-color: #2f303a;
   color: #ffffff;
@@ -898,7 +971,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 450px;
-  min-height: 609px;
+  max-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -931,7 +1004,6 @@ img {
   pointer-events: none;
 }
 
-/* ==========BACKDROP END========== */
 .modal-title-text {
   font-weight: 900;
   font-size: 20px;

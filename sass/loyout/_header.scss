@@ -1,13 +1,35 @@
 .header {
   border-bottom: 1px solid #ececec;
+
+  position: relative;
 }
 
-.header .container {
+.menu-button {
+  border: none;
+  background-color: transparent;
+  outline: none;
+
+  & .icom-menu-close {
+    display: none;
+  }
+
+  &.is-open .icom-menu-close {
+    display: block;
+  }
+
+  &.is-open .icom-menu {
+    display: none;
+  }
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.header-container {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
-
-/* лого */
 
 .logo {
   font-family: Raleway, sans-serif;
@@ -16,8 +38,6 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
-
-  margin-right: 93px;
 }
 
 .logo-web {
@@ -40,7 +60,7 @@
 
 .site-nav {
   display: flex;
-  align-items: center;
+  text-align: center;
 }
 
 .site-nav-link {
@@ -53,10 +73,7 @@
   text-decoration: none;
 
   display: block;
-  min-height: 80px;
-
   position: relative;
-  padding-top: 32px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -70,7 +87,8 @@
     background-color: $accent-color;
 
     position: absolute;
-    bottom: 0;
+
+    top: 25px;
 
     opacity: 0;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,12 +110,13 @@
 
 .site-nav-list {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .site-nav-list-item {
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 40px;
   }
 }
 
@@ -108,8 +127,12 @@
 /* ссылки на почти и телефон */
 
 .contacts {
-  display: flex;
-  margin-left: auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.contact-item-phone {
+  margin-top: 16px;
 }
 
 .contacts-link {
@@ -172,204 +195,85 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact-item-mail {
-  margin-right: 50px;
-}
+@media screen and (max-width: 767px) {
+  .menu-container {
+    padding-top: 60px;
+    padding-bottom: 60px;
 
-.menu-button {
-  display: block;
-  border: none;
-  background-color: transparent;
-
-  & .icom-menu-close {
-    display: none;
-  }
-
-  &.is-open .icom-menu-close {
     display: block;
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1;
+
+    background-color: $white-color;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    &.is-open {
+      display: block;
+    }
   }
 
-  &.is-open .icom-menu {
-    display: none;
+  .header-container {
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 }
 
-// ------
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
 
-// .header {
-//   border-bottom: 1px solid #ececec;
-// }
+  .menu-container {
+    display: flex;
+  }
 
-// .header .container {
-//   display: flex;
-//   align-items: center;
-// }
+  .site-nav-list {
+    flex-direction: row;
+  }
 
-// /* лого */
+  .contacts {
+    margin-top: 21px;
+    text-align: left;
+    margin-left: 84px;
+  }
 
-// .logo {
-//   font-family: Raleway, sans-serif;
-//   font-weight: 700;
-//   font-size: 26px;
-//   line-height: 1.2;
-//   letter-spacing: 0.03em;
-//   text-decoration: none;
+  .site-nav-list-item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 
-//   margin-right: 93px;
-// }
+  .site-nav-link {
+    padding-top: 32px;
+    &::after {
+      top: 84px;
+    }
+  }
 
-// .logo-web {
-//   color: $accent-color;
+  .logo {
+    margin-top: 24px;
+  }
+}
 
-//   font-family: Raleway, sans-serif;
-// }
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-left: 305px;
+  }
 
-// .logo-studio {
-//   color: $title-text-color;
+  .contact-item-phone {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
 
-//   font-family: Raleway, sans-serif;
-//   font-weight: 700;
-//   font-size: 26px;
-//   line-height: 1.2;
-//   letter-spacing: 0.03em;
-// }
-
-// /* главная навигация */
-
-// .site-nav {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .site-nav-link {
-//   color: $title-text-color;
-
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   text-decoration: none;
-
-//   display: block;
-//   min-height: 80px;
-
-//   position: relative;
-//   padding-top: 32px;
-
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &::after {
-//     content: "";
-
-//     display: block;
-//     width: 100%;
-//     height: 4px;
-//     border-radius: 2px;
-//     background-color: $accent-color;
-
-//     position: absolute;
-//     bottom: 0;
-
-//     opacity: 0;
-//     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//   }
-
-//   &:hover {
-//     color: $accent-color;
-//   }
-//   &:focus {
-//     color: $accent-color;
-//   }
-// }
-
-// .underline {
-//   &::after {
-//     opacity: 1;
-//   }
-// }
-
-// .site-nav-list {
-//   display: flex;
-//   align-items: center;
-// }
-
-// .site-nav-list-item {
-//   &:not(:last-child) {
-//     margin-right: 50px;
-//   }
-// }
-
-// .current {
-//   color: $accent-color;
-// }
-
-// /* ссылки на почти и телефон */
-
-// .contacts {
-//   display: flex;
-//   margin-left: auto;
-// }
-
-// .contacts-link {
-//   color: $primary-text-color;
-
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: 1.14;
-//   letter-spacing: 0.02em;
-//   text-decoration: none;
-//   display: inline-flex;
-
-//   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-//   &:hover .svg-mail {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-
-//   &:focus .svg-mail {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-
-//   &:hover .svg-phone {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-
-//   &:focus .svg-phone {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-
-//   &:hover {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-
-//   &:focus {
-//     color: $accent-color;
-//     fill: $accent-color;
-//   }
-// }
-
-// .svg-mail {
-//   width: 16px;
-//   height: 12px;
-//   margin-right: 10px;
-//   fill: $primary-text-color;
-
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .svg-phone {
-//   width: 10px;
-//   height: 16px;
-//   margin-right: 10px;
-//   fill: $primary-text-color;
-//   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-// }
-
-// .contact-item-mail {
-//   margin-right: 50px;
-// }

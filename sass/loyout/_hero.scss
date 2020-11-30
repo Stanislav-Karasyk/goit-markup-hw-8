@@ -13,7 +13,7 @@
 }
 
 .hero-title {
-  width: 360px;
+  width: 100%;
   margin: 0 auto;
 
   color: $white-color;
@@ -79,6 +79,10 @@
         ),
         url("../images/hero/bg-tablet@2x.jpg");
     }
+  }
+
+  .hero-title {
+    width: 360px;
   }
 }
 
