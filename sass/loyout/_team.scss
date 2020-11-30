@@ -54,7 +54,7 @@
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .social-list-link {
@@ -96,7 +96,8 @@
 }
 
 .team-card-info {
-  padding: 30px 122px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {

@@ -14,6 +14,7 @@ body {
 
 img {
   display: block;
+  width: 100%;
 }
 
 .list {
@@ -394,7 +395,7 @@ img {
 }
 
 .advantages-list-item {
-  width: 450px;
+  max-height: 450px;
 }
 
 .advantages-list-item:not(:last-child) {
@@ -420,7 +421,8 @@ img {
 }
 
 .advantages-icon-bg {
-  padding: 25px 192px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   margin-bottom: 30px;
   border-radius: 4px;
   background: #f5f4fa;
@@ -429,6 +431,8 @@ img {
 .advantages-icon {
   width: 70px;
   height: 70px;
+  display: block;
+  margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -573,7 +577,7 @@ img {
 
 .social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .social-list-link {
@@ -611,7 +615,8 @@ img {
 }
 
 .team-card-info {
-  padding: 30px 122px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -970,8 +975,8 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 450px;
-  max-height: 609px;
+  width: 100%;
+  min-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1137,6 +1142,12 @@ img {
 
 .modal-form-btn:hover {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
