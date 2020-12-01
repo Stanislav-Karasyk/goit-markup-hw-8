@@ -69,15 +69,19 @@ img {
 }
 
 .menu-button .icom-menu-close {
+  display: block;
+}
+
+.menu-button .icom-menu {
   display: none;
 }
 
 .menu-button.is-open .icom-menu-close {
-  display: block;
+  display: none;
 }
 
 .menu-button.is-open .icom-menu {
-  display: none;
+  display: block;
 }
 
 .menu-button:hover {
